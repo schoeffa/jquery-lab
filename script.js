@@ -1,31 +1,38 @@
 "use strict";
 $(document).ready(() => {
-let tableNumber;
+let table;
 
     $(document).on("click", ".available", (event) => {
-        $(".reservation").css("display", "flex");
-        tableNumber = $(event.target);
-        // console.log($(event.target));
+        $(".reservation").slideDown("slow");
+        $(".reservation .table-number").text(`Table Number: ${$(event.target)[0].outerText}`);
+        table = $(event.target);
     });
 
     $(document).on("click",".close", (event) => {
-        $(".reservation").css("display", "none");
+        $(".reservation").slideUp("slow");
     });
 
     $(document).on("click",".save", (event) => {
-        $(tableNumber).addClass("reserved");
-        $(tableNumber).removeClass("available");
-        $(tableNumber).css("cursor", "not-allowed");
-        $(".reservation").css("display", "none")
-        console.log($(".available"));
+        $(table).addClass("reserved").removeClass("available").css("cursor", "not-allowed").attr("name", $(".resInput").eq(0).val()).attr("partySize", $(".resInput").eq(2).val());
+        $(".resInput").each(function () {
+            $(this).val("");
+        });
+        $(".reservation").slideUp("slow");
     });
 
     $(document).on("mouseenter", ".available", (event) => {
-        $(event.target).addClass("focusedTable");
-        $(event.target).css("cursor", "pointer");
+        $(event.target).addClass("focusedTable").css("cursor", "pointer");
     });
 
     $(document).on("mouseleave", ".available", (event) => {
         $(event.target).removeClass("focusedTable");
     });
-})
+
+    $(document).on("mouseenter", ".reserved", (event) => {
+        $(event.target).append(`<section class="resCard"><p>Name: ${$(event.target).attr("name")}</p><p>Size of party: ${$(event.target).attr("partySize")}`);
+    });
+
+    $(document).on("mouseleave", ".reserved", (event) => {
+        $(".resCard").remove();
+    });
+});

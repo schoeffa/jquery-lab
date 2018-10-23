@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Mono'), local('RobotoMono-Regular'), url(https://fonts.gstatic.com/s/robotomono/v5/L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Mono Bold'), local('RobotoMono-Bold'), url(https://fonts.gstatic.com/s/robotomono/v5/L0xkDF4xlVMF-BfR8bXMIjDwjmqxf78.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v7/iJWKBXyIfDnIV7nBrXw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Rubik Bold'), local('Rubik-Bold'), url(https://fonts.gstatic.com/s/rubik/v7/iJWHBXyIfDnIV7F6iGmd8WA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+html {
+    font-family: Roboto Mono;
+}
+
+body {
+    background-color: #E1D7D4;
+}
+
+.table-picker {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-header {
+    font-family: Rubik;
+    font-weight: bold;
+    color: #E34E45;
+    margin-bottom: 0;
+    font-size: 3em;
+}
+
+.sub-header {
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.reservation {
+    height: 500px;
+    display: none;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    align-items: flex-start;
+    justify-content: space-around;
+    background-color: white;
+    width: 600px;
+    bottom: 400px;
+    left: 425px;
+    box-shadow: 0px 0px 31px 1px rgba(0, 0, 0, 0.3);
+}
+
+.table-layout {
+    background-color: white;
+    display: flex;
+    width: 500px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 0px 30px;
+
+}
+.available {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ADAAAA;
+    border: none;
+    border-radius: 50%;
+    background-color: #CCC;
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+}
+
+.reserved {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EEE;
+    border: none;
+    border-radius: 50%;
+    background-color: #ADAAAA;
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+}
+
+.form-header {
+    font-family: Rubik;
+    color: #E34E45;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.save {
+    box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.3);
+    background-color: #008000;
+    color: white;
+    border: none;
+    width: 100%;
+    margin: 20px 0px;
+    height: 30px;
+}
+
+.resInput {
+    margin: 20px 0px;
+    width: 100%;
+    border: none;
+}
+
+.close {
+    align-self: flex-end;
+    color: #ADAAAA;
+}
+
+.focusedTable {
+    background-color:#EEE;
+    color:#CCC;
+}
